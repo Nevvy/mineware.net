@@ -119,13 +119,13 @@ local decode = {
     ["w_knife push"] = draw.CreateTexture(common.DecodePNG(http.Get("https://i.imgur.com/t1ERZSK.png"))),
     ["w_knife widowmaker"] = draw.CreateTexture(common.DecodePNG(http.Get("https://i.imgur.com/ip8a2yf.png"))),
     ["w_m4a1 silencer"] = draw.CreateTexture(common.DecodePNG(http.Get("https://i.imgur.com/4zrkB1k.png"))),
-	["w_hegrenade"] = draw.CreateTexture(common.DecodePNG(http.Get("https://i.imgur.com/GzLR0Eu.png"))),
-	["w_smokegrenade"] = draw.CreateTexture(common.DecodePNG(http.Get("https://i.imgur.com/cRYOId3.png"))),
-	["w_flashbang"] = draw.CreateTexture(common.DecodePNG(http.Get("https://i.imgur.com/m9JaDkc.png"))),
-	["w_molotov"] = draw.CreateTexture(common.DecodePNG(http.Get("https://i.imgur.com/Xv7Mk2Q.png"))),
-	["w_incgrenade"] = draw.CreateTexture(common.DecodePNG(http.Get("https://i.imgur.com/GjXyiHf.png"))),
-	["w_decoy"] = draw.CreateTexture(common.DecodePNG(http.Get("https://i.imgur.com/koyF2VN.png"))),
-	["w_c4"] = draw.CreateTexture(common.DecodePNG(http.Get("https://i.imgur.com/IDPbISq.png")))
+    ["w_hegrenade"] = draw.CreateTexture(common.DecodePNG(http.Get("https://i.imgur.com/GzLR0Eu.png"))),
+    ["w_smokegrenade"] = draw.CreateTexture(common.DecodePNG(http.Get("https://i.imgur.com/cRYOId3.png"))),
+    ["w_flashbang"] = draw.CreateTexture(common.DecodePNG(http.Get("https://i.imgur.com/m9JaDkc.png"))),
+    ["w_molotov"] = draw.CreateTexture(common.DecodePNG(http.Get("https://i.imgur.com/Xv7Mk2Q.png"))),
+    ["w_incgrenade"] = draw.CreateTexture(common.DecodePNG(http.Get("https://i.imgur.com/GjXyiHf.png"))),
+    ["w_decoy"] = draw.CreateTexture(common.DecodePNG(http.Get("https://i.imgur.com/koyF2VN.png"))),
+    ["w_c4"] = draw.CreateTexture(common.DecodePNG(http.Get("https://i.imgur.com/IDPbISq.png")))
 }
 
 local size = {
