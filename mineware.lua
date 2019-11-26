@@ -1,5 +1,5 @@
 local mineware_enable_menu = gui.Checkbox(gui.Reference("MISC", "GENERAL", "MAIN"), "lua_mineware_enable_menu", "MINEWARE.net", false)
-local mineware_gui = gui.Window("lua_mineware_gui_pos", "MINEWARE.net BETA | 1.12", 200, 200, 200, 320)
+local mineware_gui = gui.Window("lua_mineware_gui_pos", "MINEWARE.net | 1.12a", 200, 200, 200, 320)
 local mineware_gui_groupbox = gui.Groupbox(mineware_gui, "SETTINGS", 10, 10, 180, 180)
 local mineware_about = gui.Groupbox(mineware_gui, "About MINEWARE", 10, 200, 180, 80)
 local mineware_about_text = gui.Text(mineware_about, "Author: Nevvy#0001")
@@ -222,7 +222,7 @@ local function get_wep()
         for i = 0, 8, 1 do
             for ii, v in pairs(weapon_table) do
                 for iii, vv in pairs(v) do
-                    if localPlayer:GetPropEntity("m_hMyWeapons", "00" .. i) ~= nil and localPlayer:GetPropEntity("m_hMyWeapons", "00" .. i):GetName() == vv then
+                    if localPlayer:GetPropEntity("m_hMyWeapons", "00" .. i) ~= nil and string.gsub(localPlayer:GetPropEntity("m_hMyWeapons", "00" .. i):GetName(),' %b()', '') == vv  then
                         if ii == 4 then
                             count = count + 1
                         end
@@ -235,7 +235,7 @@ local function get_wep()
         for ii, v in pairs(weapon_table) do
             for _, vv in pairs(v) do
                 local active_wpn_ent = localPlayer:GetPropEntity("m_hActiveWeapon")
-                if active_wpn_ent ~= nil and active_wpn_ent:GetName() == vv then
+                if active_wpn_ent ~= nil and active_wpn_ent:GetName():gsub(' %b()', '') == vv then
                     current_slot = ii
                 end
             end
