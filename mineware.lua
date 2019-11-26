@@ -1,5 +1,5 @@
 local mineware_enable_menu = gui.Checkbox(gui.Reference("MISC", "GENERAL", "MAIN"), "lua_mineware_enable_menu", "MINEWARE.net", false)
-local mineware_gui = gui.Window("lua_mineware_gui_pos", "MINEWARE.net | 1.12a", 200, 200, 200, 320)
+local mineware_gui = gui.Window("lua_mineware_gui_pos", "MINEWARE.net | 1.12b", 200, 200, 200, 320)
 local mineware_gui_groupbox = gui.Groupbox(mineware_gui, "SETTINGS", 10, 10, 180, 180)
 local mineware_about = gui.Groupbox(mineware_gui, "About MINEWARE", 10, 200, 180, 80)
 local mineware_about_text = gui.Text(mineware_about, "Author: Nevvy#0001")
