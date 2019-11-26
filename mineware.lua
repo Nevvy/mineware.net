@@ -222,7 +222,7 @@ local function get_wep()
         for i = 0, 8, 1 do
             for ii, v in pairs(weapon_table) do
                 for iii, vv in pairs(v) do
-                    if localPlayer:GetPropEntity("m_hMyWeapons", "00" .. i) ~= nil and string.gsub(localPlayer:GetPropEntity("m_hMyWeapons", "00" .. i):GetName(),' %b()', '') == vv  then
+                    if localPlayer:GetPropEntity("m_hMyWeapons", "00" .. i) ~= nil and localPlayer:GetPropEntity("m_hMyWeapons", "00" .. i):GetName() == vv then
                         if ii == 4 then
                             count = count + 1
                         end
@@ -235,7 +235,7 @@ local function get_wep()
         for ii, v in pairs(weapon_table) do
             for _, vv in pairs(v) do
                 local active_wpn_ent = localPlayer:GetPropEntity("m_hActiveWeapon")
-                if active_wpn_ent ~= nil and active_wpn_ent:GetName():gsub(' %b()', '') == vv then
+                if active_wpn_ent ~= nil and active_wpn_ent:GetName() == vv then
                     current_slot = ii
                 end
             end
