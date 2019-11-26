@@ -286,7 +286,11 @@ local function mineware()
     end
 
     if mc_hud_health then
-        local calc_health = math.floor(localPlayer:GetHealth() / 5) * 5
+        local health = localPlayer:GetHealth()
+        if health >= 100 then
+            health = 100
+        end
+        local calc_health = math.floor(health / 5) * 5
         local x = w / 2 - (size.hotbar_w * hud_scale) / 2
         local y = h - (size.hotbar_h * hud_scale) * 1.55
         draw.SetTexture(decode["hp_" .. calc_health])
@@ -294,7 +298,11 @@ local function mineware()
     end
 
     if mc_hud_armor then
-        local calc_armor = math.floor(localPlayer:GetProp("m_ArmorValue") / 5) * 5
+        local armor = localPlayer:GetProp("m_ArmorValue")
+        if armor >= 100 then
+            armor = 100
+        end
+        local calc_armor = math.floor(armor / 5) * 5
         local x = w / 2 + (size.hotbar_w * hud_scale) / 2 - (size.ibar_w * hud_scale)
         local y = h - (size.hotbar_h * hud_scale) * 1.55
         draw.SetTexture(decode["armor_" .. calc_armor])
